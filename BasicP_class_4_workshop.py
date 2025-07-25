@@ -19,7 +19,14 @@ def show_movies(movies_list):
 show_movies(movies_list)
 
 # # ฟังก์ชันตรวจสอบอายุตามข้อจำกัดของหนัง
-# def check_age(user_age, age_restriction):
+user_age = input('กรอกอายุของท่าน : ')
+def check_age(movies_list):
+    for aged in movies_list:
+        if aged['age_restriction'] == 'G':
+            print('Pass! Can watch it now!!')
+        elif aged['age_restriction'] != 'G':
+            if user_age <= aged['age_restriction']
+
 #     #  ถ้า age_restriction เป็น 'G' ให้ผ่านเลย
 #     # ถ้าไม่ใช่ ให้ดึงเลขอายุขั้นต่ำมาเปรียบเทียบกับ user_age
 
