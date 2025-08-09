@@ -24,16 +24,31 @@ def check_age(movies_list):
     for aged in movies_list:
         if aged['age_restriction'] == 'G':
             print('Pass! Can watch it now!!')
+            return
         elif aged['age_restriction'] != 'G':
-            if user_age <= aged['age_restriction']
+            if user_age < aged['age_restriction']:
+                print("You can't watch this")
+            elif user_age >= aged['age_restriction']:
+                print('Okii! Can watch it now!!')
+            else:
+                print("Error")
+check_age(movies_list)
 
 #     #  ถ้า age_restriction เป็น 'G' ให้ผ่านเลย
 #     # ถ้าไม่ใช่ ให้ดึงเลขอายุขั้นต่ำมาเปรียบเทียบกับ user_age
 
-# # ฟังก์ชันคำนวณราคาตั๋วโดยขึ้นกับประเภทหนัง
-# def calculate_price(base_price, genre):
-#     # ถ้า genre เป็น 'Horror' บวกเพิ่ม 50 บาท
-#     # ถ้าไม่ใช่ คืนราคาเดิม
+# ฟังก์ชันคำนวณราคาตั๋วโดยขึ้นกับประเภทหนัง
+def calculate_price(movies_list):
+    for price in movies_list:
+        for concept in movies_list:
+            if concept['genre'] == 'Horror':
+                price['ticket_price']+50
+            else:
+                return
+calculate_price(movies_list)
+
+    # ถ้า genre เป็น 'Horror' บวกเพิ่ม 50 บาท
+    # ถ้าไม่ใช่ คืนราคาเดิม
 
 # # ฟังก์ชันสำหรับการซื้อบัตรชมหนัง
 # def buy_ticket(movie_list):
